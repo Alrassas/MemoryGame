@@ -13,9 +13,9 @@
 		54AC0A3E284CCF750024111E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54AC0A3C284CCF750024111E /* Main.storyboard */; };
 		54AC0A40284CCF770024111E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54AC0A3F284CCF770024111E /* Assets.xcassets */; };
 		54AC0A43284CCF770024111E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54AC0A41284CCF770024111E /* LaunchScreen.storyboard */; };
-		54AC0A4E284CCF770024111E /* HappyBobMemoryGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AC0A4D284CCF770024111E /* HappyBobMemoryGameTests.swift */; };
-		54AC0A58284CCF770024111E /* HappyBobMemoryGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AC0A57284CCF770024111E /* HappyBobMemoryGameUITests.swift */; };
-		54AC0A5A284CCF770024111E /* HappyBobMemoryGameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AC0A59284CCF770024111E /* HappyBobMemoryGameUITestsLaunchTests.swift */; };
+		54AC0A6A284CD27A0024111E /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AC0A69284CD27A0024111E /* Tile.swift */; };
+		54AC0A6C284CD29A0024111E /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AC0A6B284CD29A0024111E /* MemoryGame.swift */; };
+		54AC0A6E284CD2C60024111E /* TileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AC0A6D284CD2C60024111E /* TileCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,10 +45,10 @@
 		54AC0A42284CCF770024111E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		54AC0A44284CCF770024111E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54AC0A49284CCF770024111E /* HappyBobMemoryGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HappyBobMemoryGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		54AC0A4D284CCF770024111E /* HappyBobMemoryGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyBobMemoryGameTests.swift; sourceTree = "<group>"; };
 		54AC0A53284CCF770024111E /* HappyBobMemoryGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HappyBobMemoryGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		54AC0A57284CCF770024111E /* HappyBobMemoryGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyBobMemoryGameUITests.swift; sourceTree = "<group>"; };
-		54AC0A59284CCF770024111E /* HappyBobMemoryGameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyBobMemoryGameUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		54AC0A69284CD27A0024111E /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
+		54AC0A6B284CD29A0024111E /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
+		54AC0A6D284CD2C60024111E /* TileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +80,6 @@
 			isa = PBXGroup;
 			children = (
 				54AC0A35284CCF750024111E /* HappyBobMemoryGame */,
-				54AC0A4C284CCF770024111E /* HappyBobMemoryGameTests */,
-				54AC0A56284CCF770024111E /* HappyBobMemoryGameUITests */,
 				54AC0A34284CCF750024111E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,10 +97,11 @@
 		54AC0A35284CCF750024111E /* HappyBobMemoryGame */ = {
 			isa = PBXGroup;
 			children = (
+				54AC0A68284CD1E80024111E /* Controller */,
+				54AC0A67284CD1E50024111E /* View */,
+				54AC0A66284CD1D40024111E /* Model */,
 				54AC0A36284CCF750024111E /* AppDelegate.swift */,
 				54AC0A38284CCF750024111E /* SceneDelegate.swift */,
-				54AC0A3A284CCF750024111E /* ViewController.swift */,
-				54AC0A3C284CCF750024111E /* Main.storyboard */,
 				54AC0A3F284CCF770024111E /* Assets.xcassets */,
 				54AC0A41284CCF770024111E /* LaunchScreen.storyboard */,
 				54AC0A44284CCF770024111E /* Info.plist */,
@@ -110,21 +109,30 @@
 			path = HappyBobMemoryGame;
 			sourceTree = "<group>";
 		};
-		54AC0A4C284CCF770024111E /* HappyBobMemoryGameTests */ = {
+		54AC0A66284CD1D40024111E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				54AC0A4D284CCF770024111E /* HappyBobMemoryGameTests.swift */,
+				54AC0A69284CD27A0024111E /* Tile.swift */,
+				54AC0A6B284CD29A0024111E /* MemoryGame.swift */,
 			);
-			path = HappyBobMemoryGameTests;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		54AC0A56284CCF770024111E /* HappyBobMemoryGameUITests */ = {
+		54AC0A67284CD1E50024111E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				54AC0A57284CCF770024111E /* HappyBobMemoryGameUITests.swift */,
-				54AC0A59284CCF770024111E /* HappyBobMemoryGameUITestsLaunchTests.swift */,
+				54AC0A3C284CCF750024111E /* Main.storyboard */,
+				54AC0A6D284CD2C60024111E /* TileCell.swift */,
 			);
-			path = HappyBobMemoryGameUITests;
+			path = View;
+			sourceTree = "<group>";
+		};
+		54AC0A68284CD1E80024111E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				54AC0A3A284CCF750024111E /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +266,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54AC0A6E284CD2C60024111E /* TileCell.swift in Sources */,
 				54AC0A3B284CCF750024111E /* ViewController.swift in Sources */,
 				54AC0A37284CCF750024111E /* AppDelegate.swift in Sources */,
+				54AC0A6C284CD29A0024111E /* MemoryGame.swift in Sources */,
 				54AC0A39284CCF750024111E /* SceneDelegate.swift in Sources */,
+				54AC0A6A284CD27A0024111E /* Tile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +279,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54AC0A4E284CCF770024111E /* HappyBobMemoryGameTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,8 +286,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54AC0A5A284CCF770024111E /* HappyBobMemoryGameUITestsLaunchTests.swift in Sources */,
-				54AC0A58284CCF770024111E /* HappyBobMemoryGameUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +451,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -471,6 +480,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
